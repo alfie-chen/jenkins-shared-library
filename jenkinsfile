@@ -1,12 +1,14 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World!!!!!'
-            }
-        }
+  agent any
+  
+  parameters { text(name: 'DEPLOY_TEXT', defaultValue: 'One\nTwo\nThree\n', description: '') }
+  
+  stages {
+    stage('Hello') {
+      steps {
+        echo 'Hello World!!!!!'
+      }
     }
+  }
 }
 
