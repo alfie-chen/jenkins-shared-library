@@ -1,6 +1,7 @@
 @Library('jenkins-shared-library@main') _
 
 def tools = new org.devops.tools()
+hello()
 
 pipeline {
   agent any
