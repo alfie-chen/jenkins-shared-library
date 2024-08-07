@@ -14,7 +14,9 @@ pipeline {
     stage('Hello') {
       steps {
         echo 'Hello World!!!!!'
-        tools.PrintMessage("Print Message")
+        script {
+          tools.PrintMessage("Print Message")
+        }
       }
     }
   }
