@@ -33,7 +33,7 @@ pipeline {
         Hello Subject!!!!
       ''',
       to: '''
-        alfie.feifei@gmail.com
+        YenHsiangChen@fih-foxconn.com
       '''
     }
   }
