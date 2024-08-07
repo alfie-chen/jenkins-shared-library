@@ -32,9 +32,7 @@ pipeline {
       subject: '''
         Hello Subject!!!!
       ''',
-      to: '''
-        YenHsiangChen@fih-foxconn.com
-      '''
+      to: emailList()
     }
   }
 }
