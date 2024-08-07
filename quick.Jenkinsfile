@@ -24,17 +24,6 @@ pipeline {
 
   post {
     always {
-      archiveArtifacts artifacts: '''
-        Log/**,
-        *.log,
-        can_log.txt,
-        can_api.log,
-        report/environment.properties
-      ''', allowEmptyArchive: true
-
-      junit allowEmptyResults: true, testResults: 'result.xml'
-      allure includeProperties: false, jdk: '', results: [[path: 'report']]
-
       emailext mimeType: 'text/html',
       body: '''${SCRIPT, template="groovy-html-larry-refactor.template"}''',
       postsendScript: '$DEFAULT_POSTSEND_SCRIPT',
