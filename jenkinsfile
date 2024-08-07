@@ -1,3 +1,7 @@
+@Library('jenkins-shared-library')
+
+def tools = new org.devops.tools()
+
 pipeline {
   agent any
   
@@ -10,6 +14,7 @@ pipeline {
     stage('Hello') {
       steps {
         echo 'Hello World!!!!!'
+        tools.PrintMessage("Print Message")
       }
     }
   }
