@@ -1,5 +1,3 @@
-def getEmailList() {
-    return '''
-        YenHsiangChen@fih-foxconn.com
-    '''
+def call() {
+  return 'YenHsiangChen@fih-foxconn.com'
 }
